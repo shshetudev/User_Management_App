@@ -1,14 +1,12 @@
-package com.shetu.user_management_app.unit_test.service;
+package com.shetu.user_management_app.service;
 
 import com.shetu.user_management_app.dto.request.UserRequestDTO;
 import com.shetu.user_management_app.enums.UserType;
-import com.shetu.user_management_app.exception.BadRequestException;
 import com.shetu.user_management_app.exception.ResourceNotFoundException;
 import com.shetu.user_management_app.model.User;
 import com.shetu.user_management_app.repository.UserRepository;
 import com.shetu.user_management_app.service_impl.UserServiceImpl;
-import com.shetu.user_management_app.unit_test.UnitTestUtils;
-import io.swagger.models.auth.In;
+import com.shetu.user_management_app.UnitTestUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.junit.jupiter.api.*;
@@ -124,7 +122,7 @@ public class TestUserService {
     @DisplayName("Find User By Id")
     public void testFindUserById() throws Exception {
         User createdUser = UnitTestUtils.createFirstParentUserWithoutChildUsers();
-        Mockito.when(userRepository.findById(1)).thenReturn(java.util.Optional.of(createdUser));
+        Mockito.when(userRepository.findById(1)).thenReturn(Optional.of(createdUser));
         User foundUser = userService.findById(1);
         Assertions.assertEquals(createdUser.getFirstName(),foundUser.getFirstName());
     }
@@ -135,7 +133,7 @@ public class TestUserService {
     public void testNotFindByIdAndUserType() throws Exception {
         // Arrange
         User parentUserWithoutChildUsers = UnitTestUtils.createFirstParentUserWithoutChildUsers();
-        Mockito.when(userRepository.findByIdAndUserType(3,UserType.PARENT)).thenReturn(java.util.Optional.of(parentUserWithoutChildUsers));
+        Mockito.when(userRepository.findByIdAndUserType(3,UserType.PARENT)).thenReturn(Optional.of(parentUserWithoutChildUsers));
         Assertions.assertEquals("Belal", userService.findByIdAndUserType(3,UserType.PARENT).getFirstName());
     }
 
@@ -145,7 +143,7 @@ public class TestUserService {
     @DisplayName("Find User By Id and UserType")
     public void testFindByIdAndUserType() throws Exception {
         User parentUserWithoutChildUsers = UnitTestUtils.createFirstParentUserWithoutChildUsers();
-        Mockito.when(userRepository.findByIdAndUserType(3,UserType.PARENT)).thenReturn(java.util.Optional.of(parentUserWithoutChildUsers));
+        Mockito.when(userRepository.findByIdAndUserType(3,UserType.PARENT)).thenReturn(Optional.of(parentUserWithoutChildUsers));
         Assertions.assertEquals("Belal", userService.findByIdAndUserType(3,UserType.PARENT).getFirstName());
     }
 
@@ -234,7 +232,7 @@ public class TestUserService {
     public void testDeleteParentUserHavingNoChildUser() throws Exception {
         // Arrange
         User parentUser = UnitTestUtils.createFirstParentUserWithoutChildUsers();
-        Mockito.when(userRepository.findById(parentUser.getId())).thenReturn(java.util.Optional.of(parentUser));
+        Mockito.when(userRepository.findById(parentUser.getId())).thenReturn(Optional.of(parentUser));
         // Action
         // Assertion
         Assertions.assertEquals(parentUser, userService.deleteUserById(parentUser.getId()));
@@ -258,7 +256,7 @@ public class TestUserService {
     public void testDeleteChildUser() throws Exception {
         // Arrange
         User childUser = UnitTestUtils.createSecondChildUserAttachedToSecondParentUser();
-        Mockito.when(userRepository.findById(childUser.getId())).thenReturn(java.util.Optional.of(childUser));
+        Mockito.when(userRepository.findById(childUser.getId())).thenReturn(Optional.of(childUser));
         // Action
         // Assertion
         Assertions.assertEquals(childUser, userService.deleteUserById(childUser.getId()));

@@ -1,4 +1,4 @@
-package com.shetu.user_management_app.unit_test;
+package com.shetu.user_management_app;
 
 import com.shetu.user_management_app.dto.request.UserRequestDTO;
 import com.shetu.user_management_app.enums.UserType;

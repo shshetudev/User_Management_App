@@ -1,8 +1,7 @@
-package com.shetu.user_management_app.unit_test.repository;
+package com.shetu.user_management_app.repository;
 
 import com.shetu.user_management_app.enums.UserType;
 import com.shetu.user_management_app.model.User;
-import com.shetu.user_management_app.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import javax.transaction.Transactional;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /*todo: 3 rules to follow: Arrange, Act, Assert
  * */
