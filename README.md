@@ -13,13 +13,13 @@ c. SDLC:
   6. Deployment
 
 # Tech Stack Used
-1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log
+1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log, Custom Exception Handling
 2. Client Side: HTML5, CSS3, BootStrap-4, Angular
 3. Database: MySQL, Flyway(Data Migration Tool)
 4. Deployment: Docker (Optional)
 5. Testing Covered: Mockito(Unit Testing), Junit(Integration Testing)
 
-# a) Enviroment Setup: (For Linux Users)
+# a)Enviroment Setup: (For Linux Users)
 
  Server Side Environment:
 i.   Installing Java 8:
