@@ -21,26 +21,26 @@ c. SDLC:
 
 # a) Enviroment Setup: (For Linux Users)
 
-# Server Side Environment:
+ Server Side Environment:
 i.   Installing Java 8:
 ii.  Installing Git:
 iii. Installing Maven:
 iv.  Installing MySQL:
 v.   Installing Docker (if you want to deploy in container):
 
-# Client Side Enviroment Setup: 
+ Client Side Enviroment Setup: 
 vi. Installing Angular
 
 # Enviroment Setup: (For Windows Users)
 
-# Server Side Environment:
+ Server Side Environment:
 i.   Installing Java 8:
 ii.  Installing Git:
 iii. Installing Maven:
 iv.  Installing MySQL:
 v.   Installing Docker (if you want to deploy in container):
 
-# Client Side Enviroment Setup: 
+ Client Side Enviroment Setup: 
 vi. Installing Angular
 
 # b. Quick Start:
@@ -58,17 +58,17 @@ vi. Installing Angular
   
   By Analyzing the business domain / requirements and aligning with real world scenarios, we discovered and developed the following functionalites for Creating, Updating and Deleting Users:
   
-  a) Create User Data:
+  # a) Create User Data:
   i.  A Child User must be created under a Parent User.
   ii. A Child User is not a must to create a Parent User. But A parent user  can have a child user while user creation.
   iii. First Name and User Type can not be empty for any type of user.
 
-  b) Update User Data:
+ # b) Update User Data:
   i. If a Parent User or Child User can update any field except User Type, that field will be updated without any complex logic implementation.
   ii. If the User Type of Child User is changed to Parent User, the Child will be no longer under any Parent User.
   iii. If the User Type of a Parent User is changed to Child User and if that Parent User has any Child User, those Child users User Type will be updated to Parent User. And this Parent User must be assigned to an existing Parent User.
   
-  c) Delete User Data:
+ # c) Delete User Data:
   i. If a Parent User is deleted , then all the Child Users User Type of that Parent User will be updated to Child User. And only that Parent User will be deleted.
   ii. While a Child User is deleted, it will be deleted for storage and there will be no relation with it's existing parent user.
   
