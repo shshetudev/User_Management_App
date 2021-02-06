@@ -1,0 +1,2 @@
+insert into `user` (`city`,`first_name`,`last_name`,`state`,`street`,`user_type`,`zip_code`,`created_at`, `updated_at`)
+values('Munich', 'Md. Safayet', 'Hossen', 'Germany', 'Munich Street', 'PARENT', '1234', now(),now());

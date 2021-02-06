@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "af399135-2fad-4b92-9b6d-70db2bf78fef",
+		"name": "User Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Flyway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/actuator/flyway",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"actuator",
+						"flyway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Parent User With Child User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\": \"Shahariar\",\n\"lastName\": \"Hossen\",\n\"street\": \"9/9\",\n\"city\": \"Dhaka\",\n\"state\": \"Bangladesh\",\n\"zipCode\": \"1216\",\n\"userType\": \"PARENT\",\n\"childUsers\": [\n    {\n        \"firstName\": \"Mehnaz\",\n        \"lastName\": \"Chowdhury\",\n        \"street\": \"9/9\",\n        \"city\": \"Dhaka\",\n        \"state\": \"Bangladesh\",\n        \"zipCode\": \"1216\",\n        \"userType\": \"CHILD\",\n        \"childUsers\": []\n    }\n]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/user/save",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Parent User Without Child User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\": \"Aga\",\n\"lastName\": \"Khan\",\n\"street\": \"9/9\",\n\"city\": \"Dhaka\",\n\"state\": \"Bangladesh\",\n\"zipCode\": \"1216\",\n\"userType\": \"PARENT\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/user/save",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Child User With Parent User Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\": \"Showkat\",\n\"lastName\": \"Hossen\",\n\"street\": \"9/9\",\n\"city\": \"Dhaka\",\n\"state\": \"Bangladesh\",\n\"zipCode\": \"1216\",\n\"userType\": \"CHILD\",\n\"parentUserId\": 19\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/user/save",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Child User Without Parent User Throws Exception",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\": \"Khadiza\",\n\"lastName\": \"Khatun\",\n\"street\": \"9/9\",\n\"city\": \"Dhaka\",\n\"state\": \"Bangladesh\",\n\"zipCode\": \"1216\",\n\"userType\": \"CHILD\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/user/save",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/findById/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"findById",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find User By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/user/findById/21",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"user",
+								"findById",
+								"21"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, OPTIONS, DELETE"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "3600"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-requested-with, authorization, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Feb 2021 19:27:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 21,\n    \"firstName\": \"Md. Shahariar\",\n    \"lastName\": \"Hossen\",\n    \"street\": \"9/9\",\n    \"city\": \"Dhaka\",\n    \"state\": \"Bangladesh\",\n    \"zipCode\": \"1216\",\n    \"userType\": \"PARENT\",\n    \"childUsers\": [],\n    \"createdAt\": \"2021-02-04T00:48:07.655206\",\n    \"updatedAt\": \"2021-02-04T00:48:07.655272\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Find All Parent Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/findAllByUserType/parent",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"findAllByUserType",
+						"parent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Child Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/findAll",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Parent User Having No Child",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": 18,\n\"firstName\": \"Abdul\",\n\"lastName\": \"Baten\",\n\"street\": \"9/9\",\n\"city\": \"Dhaka\",\n\"state\": \"Bangladesh\",\n\"zipCode\": \"1216\",\n\"userType\": \"CHILD\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/user/update/12",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Parent User Having Child Users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": 22,\n\"firstName\": \"Abdul\",\n\"lastName\": \"Baten\",\n\"street\": \"9/9\",\n\"city\": \"Dhaka\",\n\"state\": \"Bangladesh\",\n\"zipCode\": \"1216\",\n\"userType\": \"CHILD\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/user/update?1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"update"
+					],
+					"query": [
+						{
+							"key": "1",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Child User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/update",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Parent User By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/delete/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Child User By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/delete/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/user/deleteAll",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"user",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: prod
+
+# For docker & nginx deployment: https://hellokoding.com/docker-compose-with-spring-boot-mysql-nginx/

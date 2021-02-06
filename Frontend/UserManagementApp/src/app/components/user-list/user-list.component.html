@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <!--Searching-->
+  <div class="d-flex justify-content-center">
+    <h1>User Lists</h1>
+  </div>
+  <div class="d-flex">
+    <div class="p-2">
+      <button class="btn btn-success" type="button" routerLink="/addUser">Add New User</button>
+    </div>
+
+    <!--todo: Make the drop down functional-->
+    <div class="p-2">
+      <div class="row">
+        <div class="col">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select User Type</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Parent</button>
+              <button ngbDropdownItem>Child</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Searching-->
+    <div class="ml-auto p-2">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search in table"
+        [(ngModel)]="searchText"
+        (ngModelChange)="searchTable()"
+      >
+    </div>
+
+  </div>
+  <div class="row table-hover">
+
+    <table class="table table-hover table-bordered">
+      <thead>
+      <th>User Type</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip Code</th>
+      <th>Action</th>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.userType}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.street}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.zipcode}}</td>
+        <td>
+          <!--todo: change here properly-->
+          <button class="btn btn-danger btn-action mb-1 mr-2"
+                  title="Delete"
+                  (click)="removeUserById(user.id)">
+            <i class="fa fa-times"></i>
+          </button>
+
+          <!--[queryParams]="{ id: user.id }"-->
+          <a
+            class="btn btn-outline-success btn-action mb-1 mr-2"
+            title="Edit"
+            routerLink="/userDetails/{{user.id}}"
+            routerLinkActive="router-link-active">
+            <i class='fa fa-edit'></i>
+          </a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
