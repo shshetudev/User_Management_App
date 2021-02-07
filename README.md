@@ -2,48 +2,42 @@
 User Management Application is a simple crud application that manipulate user data based on specific requirements. This is developed by following SDLC (Software Devlopment Life Cycle). This documentation is sectioned according to the SDLC.  Hope you will enjoy!
 
 # Sections:
-a. Enviroment Setup
-b. Quick Start
-c. SDLC:
-  1. Requirements Analysis
-  2. Planning
-  3. Design
-  4. Development / Coding
-  5. Testing
-  6. Deployment
+<h2> Enviroment Setup </h2> 
+<h2> Quick Start </h2>  
+<h2>According to SDLC:<h2>
+<ol type="1">
+	<li>Requirements Analysis</li>
+	<li>Planning</li>
+	<li>Design</li>
+	<li>Development / Coding</li>
+	<li>Testing</li>
+	<li>Deployment</li>
+</ol>
+<h2>API Documentaions</h2>
+<h2>Error Logs</h2>
 
-# Tech Stack Used
+# Tech Stacks Used
 1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log, Custom Exception Handling
 2. Client Side: HTML5, CSS3, BootStrap-4, Angular
 3. Database: MySQL, Flyway(Data Migration Tool)
 4. Deployment: Docker (Optional)
 5. Testing Covered: Mockito(Unit Testing), Junit(Integration Testing)
 
-# a)Enviroment Setup: (For Linux Users)
+# Enviroment Setup: (For Linux Users)
+ <ol type="1"> 
+	<h4>Server Side Environment:</h4>
+	<li>Installing Java 8:</li>
+	<li>Installing Git:</li>
+	<li>Installing Maven:</li>
+	<li>Installing MySQL:</li>
+	<li>Installing Docker (if you want to deploy in container):</li>
+</ol>  
+ <ol type="1"> 
+	<h4> Client Side Enviroment Setup: </h4>
+	<li>Installing Angular</li>
+</ol>
 
- Server Side Environment:
-i.   Installing Java 8:
-ii.  Installing Git:
-iii. Installing Maven:
-iv.  Installing MySQL:
-v.   Installing Docker (if you want to deploy in container):
-
- Client Side Enviroment Setup: 
-vi. Installing Angular
-
-# Enviroment Setup: (For Windows Users)
-
- Server Side Environment:
-i.   Installing Java 8:
-ii.  Installing Git:
-iii. Installing Maven:
-iv.  Installing MySQL:
-v.   Installing Docker (if you want to deploy in container):
-
- Client Side Enviroment Setup: 
-vi. Installing Angular
-
-# b) Quick Start:
+# Quick Start:
 <h4>For Linux Environment</h4>
 <ul>
 	<li>Open terminal and run the command: git clone https://github.com/shshetudev/User_Management_App.git</li>
@@ -52,7 +46,6 @@ vi. Installing Angular
 	<li>Run the command : cd User_Management_App/Backend/user_management_app. Then run the command: mvn clean install . It will create the backend jar file with name: user_management_app.jar</li>
 	<li>To run the jar file with flyway simply run the command: java -jar target/user_management_app.jar</li>
 	<li>To run the jar file without flyway simply run the command: java -jar -Dspring.profiles.active=dev target/user_management_app.jar</li>
-	<li>To deploy in docker run the command: java -jar -Dspring.profiles.active=docker target/user_management_app.jar</li>
 	<li>Open the web browser and run this command to see the API documentation and testing tool Swagger's interface: http://localhost:8181/swagger-ui.html#/</li>
 	<h4><b>Frontend Deployment:</b></h4>
 	<li>Run the command: cd Frontend/UserManagementApp/</li>
@@ -61,7 +54,7 @@ vi. Installing Angular
 	<li>Go to the browser and run: http://localhost:4200/ . It will run the front end. Enjoy the Application.</li>
 </ul>
 
-# c. SDLC:
+# SDLC:
 
  # 1. Requirements :
  Create an APP that stores user data
@@ -96,7 +89,13 @@ vi. Installing Angular
   
  # 2. Planning
  # 3. Design
+ <h3>Schema Diagram: </h3>
+ <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="800px" height="400px"/>
+ <h3>Class Diagram: </h3>
+  <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/uml_diagram.png" width="500px" height="300px"/>
+ 
  # 4. Development / Coding
+ 
  # 5. Testing:
 
 	
@@ -145,4 +144,10 @@ vi. Installing Angular
 	<li><b>testDeleteChildUser: </b>Delete Child User</li>
 </ul>
 
- # 6. Deployment
+ # 6. Deployment:
+ <ul>
+	<h2>To deploy in docker: </h2>
+		<li>Run the command : cd User_Management_App/Backend/user_management_app</li>
+		<li>Install docker compose by running the command on terminal: sudo apt install docker-compose </li>
+		<li>Run the docker compose: sudo docker-compose up</li>
+	</ul>
