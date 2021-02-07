@@ -21,21 +21,21 @@ User Management Application is a simple crud application that manipulate user da
 4. Deployment: Docker (Optional)
 5. Testing Covered: Mockito(Unit Testing), Junit(Integration Testing)
 
-# a) Enviroment Setup: (For Linux Users)
+# Enviroment Setup: (For Linux Users)
  <ol type="1"> 
 	<h4>Server Side Environment:</h4>
-	<li>Installing Java 8:<li>
-	<li>Installing Git:<li>
-	<li>Installing Maven:<li>
-	<li>Installing MySQL:<li>
-	<li>Installing Docker (if you want to deploy in container):<li>
+	<li>Installing Java 8:</li>
+	<li>Installing Git:</li>
+	<li>Installing Maven:</li>
+	<li>Installing MySQL:</li>
+	<li>Installing Docker (if you want to deploy in container):</li>
 </ol>  
  <ol type="1"> 
 	<h4> Client Side Enviroment Setup: </h4>
 	<li>Installing Angular</li>
 </ol>
 
-# b) Quick Start:
+# Quick Start:
 <h4>For Linux Environment</h4>
 <ul>
 	<li>Open terminal and run the command: git clone https://github.com/shshetudev/User_Management_App.git</li>
@@ -52,7 +52,7 @@ User Management Application is a simple crud application that manipulate user da
 	<li>Go to the browser and run: http://localhost:4200/ . It will run the front end. Enjoy the Application.</li>
 </ul>
 
-# c. SDLC:
+# SDLC:
 
  # 1. Requirements :
  Create an APP that stores user data
