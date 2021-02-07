@@ -5,15 +5,15 @@ User Management Application is a simple crud application that manipulate user da
 <ol>
 	<li><h2>Enviroment Setup<h2><li>
 	<li><h2>Quick Start<h2></li>
-		<ol>
-			<h2>SDLC:<h2>
-				<li>Requirements Analysis</li>
-				<li>Planning</li>
-				<li>Design</li>
-				<li>Development / Coding</li>
-				<li>Testing</li>
-				<li>Deployment</li>
-		</ol>
+</ol>
+<ol>
+	<h2>SDLC:<h2>
+	<li>Requirements Analysis</li>
+	<li>Planning</li>
+	<li>Design</li>
+	<li>Development / Coding</li>
+	<li>Testing</li>
+	<li>Deployment</li>
 </ol>
 
 # Tech Stacks Used
