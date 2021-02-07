@@ -2,11 +2,9 @@
 User Management Application is a simple crud application that manipulate user data based on specific requirements. This is developed by following SDLC (Software Devlopment Life Cycle). This documentation is sectioned according to the SDLC.  Hope you will enjoy!
 
 # Sections:
-<ol type="a">
-	<li> <h2> Enviroment Setup </h2> </li>
-	<li> <h2> Quick Start </h2> </li>
-	<li> 
-		<h2>According to SDLC:<h2>
+<h2> Enviroment Setup </h2> 
+<h2> Quick Start </h2>  
+<h2>According to SDLC:<h2>
 <ol type="1">
 	<li>Requirements Analysis</li>
 	<li>Planning</li>
@@ -15,12 +13,6 @@ User Management Application is a simple crud application that manipulate user da
 	<li>Testing</li>
 	<li>Deployment</li>
 </ol>
-	</li>
-</ol>
-
-
-		
-
 
 # Tech Stacks Used
 1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log, Custom Exception Handling
@@ -29,29 +21,19 @@ User Management Application is a simple crud application that manipulate user da
 4. Deployment: Docker (Optional)
 5. Testing Covered: Mockito(Unit Testing), Junit(Integration Testing)
 
-# Enviroment Setup: (For Linux Users)
-
- Server Side Environment:
-i.   Installing Java 8:
-ii.  Installing Git:
-iii. Installing Maven:
-iv.  Installing MySQL:
-v.   Installing Docker (if you want to deploy in container):
-
- Client Side Enviroment Setup: 
-vi. Installing Angular
-
-# a) Enviroment Setup: (For Windows Users)
-
- Server Side Environment:
-i.   Installing Java 8:
-ii.  Installing Git:
-iii. Installing Maven:
-iv.  Installing MySQL:
-v.   Installing Docker (if you want to deploy in container):
-
- Client Side Enviroment Setup: 
-vi. Installing Angular
+# a) Enviroment Setup: (For Linux Users)
+ <ol type="1"> 
+	<h4>Server Side Environment:</h4>
+	<li>Installing Java 8:<li>
+	<li>Installing Git:<li>
+	<li>Installing Maven:<li>
+	<li>Installing MySQL:<li>
+	<li>Installing Docker (if you want to deploy in container):<li>
+</ol>  
+ <ol type="1"> 
+	<h4> Client Side Enviroment Setup: </h4>
+	<li>Installing Angular</li>
+</ol>
 
 # b) Quick Start:
 <h4>For Linux Environment</h4>
