@@ -43,7 +43,23 @@ v.   Installing Docker (if you want to deploy in container):
  Client Side Enviroment Setup: 
 vi. Installing Angular
 
-# b. Quick Start:
+# b) Quick Start:
+<h4>For Linux Environment</h4>
+<ul>
+	<li>Open terminal and run the command: git clone https://github.com/shshetudev/User_Management_App.git</li>
+	<h4><b>Backend Deployment:</b></h4>
+	<li>To install Open JDK, run the command: sudo apt-get install openjdk-8-jdk</li>
+	<li>Run the command : cd User_Management_App/Backend/user_management_app. Then run the command: mvn clean install . It will create the backend jar file with name: user_management_app.jar</li>
+	<li>To run the jar file with flyway simply run the command: java -jar target/user_management_app.jar</li>
+	<li>To run the jar file without flyway simply run the command: java -jar -Dspring.profiles.active=dev target/user_management_app.jar</li>
+	<li>To deploy in docker run the command: java -jar -Dspring.profiles.active=docker target/user_management_app.jar</li>
+	<li>Open the web browser and run this command to see the API documentation and testing tool Swagger's interface: http://localhost:8181/swagger-ui.html#/</li>
+	<h4><b>Frontend Deployment:</b></h4>
+	<li>Run the command: cd Frontend/UserManagementApp/</li>
+	<li>Install Angular CLI: npm install -g @angular/cli</li>
+	<li>To run the frontend , run the command: npm start</li>
+	<li>Go to the browser and run: http://localhost:4200/ . It will run the front end. Enjoy the Application.</li>
+</ul>
 
 # c. SDLC:
 
@@ -58,81 +74,75 @@ vi. Installing Angular
   
   By Analyzing the business domain / requirements and aligning with real world scenarios, we discovered and developed the following functionalites for Creating, Updating and Deleting Users:
   
- # a) Create User Data:
-  i.  A Child User must be created under a Parent User.
-  ii. A Child User is not a must to create a Parent User. But A parent user  can have a child user while user creation.
-  iii. First Name and User Type can not be empty for any type of user.
+ <h2> a) Create User Data: </h2> 
+ <ul>
+	<li>A Child User must be created under a Parent User.</li>
+	<li>A Child User is not a must to create a Parent User. But A parent user  can have a child user while user creation.</li>
+	<li>First Name and User Type can not be empty for any type of user.</li>
+</ul> 
 
- # b) Update User Data:
-  i. If a Parent User or Child User can update any field except User Type, that field will be updated without any complex logic implementation.
-  ii. If the User Type of Child User is changed to Parent User, the Child will be no longer under any Parent User.
-  iii. If the User Type of a Parent User is changed to Child User and if that Parent User has any Child User, those Child users User Type will be updated to Parent User. And this Parent User must be assigned to an existing Parent User.
+ <h2> b) Update User Data: </h2> 
+ <ul>
+	<li>If a Parent User or Child User can update any field except User Type, that field will be updated without any complex logic implementation.</li>
+	<li>If the User Type of Child User is changed to Parent User, the Child will be no longer under any Parent User.</li>
+	<li>If the User Type of a Parent User is changed to Child User and if that Parent User has any Child User, those Child users User Type will be updated to Parent User. And this Parent User must be assigned to an existing Parent User.</li>
+</ul>
   
- # c) Delete User Data:
-  i. If a Parent User is deleted , then all the Child Users User Type of that Parent User will be updated to Child User. And only that Parent User will be deleted.
-  ii. While a Child User is deleted, it will be deleted for storage and there will be no relation with it's existing parent user.
+ <h2> c) Delete User Data: </h2> 
+ <ul>
+	<li>If a Parent User is deleted , then all the Child Users User Type of that Parent User will be updated to Child User. And only that Parent User will be deleted.</li>
+	<li>While a Child User is deleted, it will be deleted for storage and there will be no relation with it's existing parent user.</li>
+</ul>
   
  # 2. Planning
  # 3. Design
  # 4. Development / Coding
  # 5. Testing:
- # Backend:
- ## testFindAllParentUsers:
- Find All Parent Users
- ## testFindAllChildUsers:
- Find All Child Users
- ## testFindAllUsers:
- Find All Users
- ## testNotChangeUserTypeOfParentUserToChildHavingNoChildUserDueToNoParentUserExistingInDB:
- Not Change User Type of Parent User To Child Having No ChildUser Due To No Parent User Existing in DB
- ## testNotDeleteParentUserHavingNoChildUserDueToInvalidUserId:
- Not Delete Parent User Having No Child User Due To Invalid User Id
- ## testDeleteParentUserHavingNoChildUser:
- Delete Parent User Having No Child User
- ## testNotDeleteChildUserDueToInvalidUserId:
- Not Delete Child User Due To Invalid UserId
- ## testDeleteChildUser:
- Delete Child User
- 
- # b) Integration Testing: (Repository Layer)
- ## injectedComponentsAreNotNull:
- Injected Components are not null
- ## testNotSavingUserDueToNullFirstName:
- User Saving failed due to first name being null
- ## testNotSavingUserDueToNullUserType:
- User Saving failed due to user type being null
- ## testSaveParentUser:
- Save Parent User
- ## testSaveChildUsers:
- Save 2 Child Users under the Parent User
- ## testNotFindingValidParentUser:
- Finding Invalid Parent User
- ## testFindingValidParentUser:
- Finding Valid Parent User
- ## testNotFindingValidChildUser:
- Finding Invalid Child User
- ## testFindingValidChildUser:
- Finding Valid Parent User
- ## testNotFindingByFirstNameAndUserTypeDueToWrongFirstName:
- Not Finding By First Name And UserType DueTo Wrong First Name
- ## testNotFindingByFirstNameAndUserTypeDueToWrongUserType:
- Not Finding By First Name And UserType DueTo Wrong User Type
- ## testNotFindingById:
- Not Finding User By Id due to wrong User Id
- ## testFindById:
- Finding User By Id
- ## testNotFindingAllParentUsers:
- Not Finding All Parent Users Due to Invalid UserType
- ## testFindingAllParentUsers:
- Finding All Parent Users Due to Valid UserType
- ## testNotFindingAllChildUsers:
- Not Finding All Child Users Due to Invalid UserType
- ## testFindingAllChildUsers:
- Finding All Child Users Due to Valid UserType
- ## testFindingAllChildUsersOfAParentUser:
- Finding All Child Users of a Parent User
- ## testFindingAll:
- Finding All Users
- ## testUpdatingUser:
- Update User's Last Name
+
+	
+<ul>
+	<h4> a) Unit Testing on Service Layer: </h4>
+	<li><b>injectedComponentsAreNotNull:</b> Injected Components are not null</li>
+	<li><b>testNotSavingUserDueToNullFirstName: </b>User Saving failed due to first name being null</li>
+	<li><b>testNotSavingUserDueToNullUserType: </b>User Saving failed due to user type being null</li>
+	<li><b>testSaveParentUser: </b>Save Parent User</li>
+	<li><b>testSaveChildUsers: </b>Save 2 Child Users under the Parent User</li>
+	<li><b>testNotFindingValidParentUser: </b>Finding Invalid Parent User</li>
+	<li><b>testFindingValidParentUser: </b>Finding Valid Parent User</li>
+	<li><b>testNotFindingValidChildUser: </b>Finding Invalid Child User</li>
+	<li><b>testFindingValidChildUser: </b>Finding Valid Parent User</li>
+	<li><b>testNotFindingByFirstNameAndUserTypeDueToWrongFirstName: </b>Not Finding By First Name And UserType DueTo Wrong First Name</li>
+	<li><b>testNotFindingByFirstNameAndUserTypeDueToWrongUserType: </b>Not Finding By First Name And UserType DueTo Wrong User Type</li>
+	<li><b>testNotFindingById: </b>Not Finding User By Id due to wrong User Id</li>
+	<li><b>testFindById: </b>Finding User By Id</li>
+	<li><b>testNotFindingAllParentUsers: </b>Not Finding All Parent Users Due to Invalid UserType</li>
+	<li><b>testFindingAllParentUsers: </b>Finding All Parent Users Due to Valid UserType</li>
+	<li><b>testNotFindingAllChildUsers: </b>Not Finding All Child Users Due to Invalid UserType</li>
+	<li><b>testFindingAllChildUsers: </b>Finding All Child Users Due to Valid UserType</li>
+	<li><b>testFindingAllChildUsersOfAParentUser: </b>Finding All Child Users of a Parent User</li>
+	<li><b>testFindingAll: </b>Finding All Users</li>
+	<li><b>testUpdatingUser:</b>Update User's Last Name</li>
+</ul>
+
+	
+<ul>
+	<h4> b) Integration Testing on Repository Layer: </h4>
+	<li><b>testNotSaveParentDueToNullFirstName: </b>Not Saving Parent User Due To Null First Name</li>
+	<li><b>testSaveParent: </b>Saving Parent User</li>
+	<li><b>testNotSaveChildDueToNoParentUser: </b>Not Saving Child User Due to No Valid Parent User</li>
+	<li><b>testSaveChildUnderANonExistingParentUser: </b>Saving Child User Under ANon Existing Parent User</li>
+	<li><b>testNotFindUserById: </b>Not Find User By Id</li>
+	<li><b>testFindUserById: </b>Find User By Id</li>
+	<li><b>testNotFindByIdAndUserType: </b>Not Find User By Id and UserType</li>
+	<li><b>testFindByIdAndUserType: </b>Find User By Id and UserType</li>
+	<li><b>testFindAllParentUsers: </b>Find All Parent Users</li>
+	<li><b>testFindAllChildUsers: </b>Find All Child Users</li>
+	<li><b>testFindAllUsers: </b>Find All Users</li>
+	<li><b>testNotChangeUserTypeOfParentUserToChildHavingNoChildUserDueToNoParentUserExistingInDB: </b>Not Change User Type of Parent User To Child Having No ChildUser Due To No Parent User Existing in DB</li>
+	<li><b>testNotDeleteParentUserHavingNoChildUserDueToInvalidUserId: </b>Not Delete Parent User Having No Child User Due To Invalid User Id</li>
+	<li><b>testDeleteParentUserHavingNoChildUser: </b>Delete Parent User Having No Child User</li>
+	<li><b>testNotDeleteChildUserDueToInvalidUserId: </b>Not Delete Child User Due To Invalid UserId</li>
+	<li><b>testDeleteChildUser: </b>Delete Child User</li>
+</ul>
+
  # 6. Deployment
