@@ -1,5 +1,5 @@
 # User Management Application
-User Management Application is a simple crud application that manipulate user data based on specific requirements. This is developed by following SDLC (Software Devlopment Life Cycle). This documentation is sectioned according to the SDLC.  Hope you will enjoy!
+User Management Application is a simple crud application that manipulate user data based on specific requirements. This is a monolithic application developed by following SDLC (Software Devlopment Life Cycle). This documentation is sectioned according to the SDLC.  Hope you will enjoy!
 
 # Sections:
 <h2> Enviroment Setup </h2> 
@@ -98,14 +98,14 @@ User Management Application is a simple crud application that manipulate user da
  # 2. Planning
  <h3>Project Structures:</h3>
  <h4>Server Side</h4>
- <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="800px" height="500px">
+ <img src="https://github.com/shshetudev/User_Management_App/blob/main/Application%20Structure/backend_project_structure.png" width="800px" height="500px">
  <h4>Client Side</h4>
- <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="800px" height="500px">
+ <img src="https://github.com/shshetudev/User_Management_App/blob/main/Application%20Structure/front_end_structure.png" width="800px" height="500px">
  # 3. Design
  <h3>Schema Diagram: </h3>
- <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="800px" height="400px"/>
+ <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="800px" height="500px"/>
  <h3>Class Diagram: </h3>
-  <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/uml_diagram.png" width="500px" height="300px"/>
+  <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/uml_diagram.png" width="800px" height="500px"/>
  
  # 4. Development / Coding
  
