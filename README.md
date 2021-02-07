@@ -43,7 +43,12 @@ v.   Installing Docker (if you want to deploy in container):
  Client Side Enviroment Setup: 
 vi. Installing Angular
 
-# b. Quick Start:
+# b) Quick Start:
+<h4>For Linux Environment</h4>
+<ul>
+	<li>Open terminal and run the command: git clone https://github.com/shshetudev/User_Management_App.git</li>
+	
+</ul>
 
 # c. SDLC:
 
