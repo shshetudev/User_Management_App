@@ -13,13 +13,13 @@ c. SDLC:
   6. Deployment
 
 # Tech Stack Used
-1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log
+1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log, Custom Exception Handling
 2. Client Side: HTML5, CSS3, BootStrap-4, Angular
 3. Database: MySQL, Flyway(Data Migration Tool)
 4. Deployment: Docker (Optional)
 5. Testing Covered: Mockito(Unit Testing), Junit(Integration Testing)
 
-# a) Enviroment Setup: (For Linux Users)
+# a)Enviroment Setup: (For Linux Users)
 
  Server Side Environment:
 i.   Installing Java 8:
@@ -58,7 +58,7 @@ vi. Installing Angular
   
   By Analyzing the business domain / requirements and aligning with real world scenarios, we discovered and developed the following functionalites for Creating, Updating and Deleting Users:
   
-  # a) Create User Data:
+ # a) Create User Data:
   i.  A Child User must be created under a Parent User.
   ii. A Child User is not a must to create a Parent User. But A parent user  can have a child user while user creation.
   iii. First Name and User Type can not be empty for any type of user.
@@ -77,79 +77,62 @@ vi. Installing Angular
  # 4. Development / Coding
  # 5. Testing:
  # Backend:
- # a) Unit Testing: (Service Layer)
- # testNotSaveParentDueToNullFirstName: 
- Not Saving Parent User Due To Null First Name
- # testSaveParent:
- Saving Parent User
- # testNotSaveChildDueToNoParentUser:
- Not Saving Child User Due to No Valid Parent User
- # testSaveChildUnderANonExistingParentUser:
- Saving Child User Under ANon Existing Parent User
- # testNotFindUserById:
- Not Find User By Id
- # testFindUserById:
- Find User By Id
- # testNotFindByIdAndUserType:
- Not Find User By Id and UserType
- # testFindByIdAndUserType:
- Find User By Id and UserType
- # testFindAllParentUsers:
+ ## testFindAllParentUsers:
  Find All Parent Users
- # testFindAllChildUsers:
+ ## testFindAllChildUsers:
  Find All Child Users
- # testFindAllUsers:
+ ## testFindAllUsers:
  Find All Users
- # testNotChangeUserTypeOfParentUserToChildHavingNoChildUserDueToNoParentUserExistingInDB:
+ ## testNotChangeUserTypeOfParentUserToChildHavingNoChildUserDueToNoParentUserExistingInDB:
  Not Change User Type of Parent User To Child Having No ChildUser Due To No Parent User Existing in DB
- # testNotDeleteParentUserHavingNoChildUserDueToInvalidUserId:
+ ## testNotDeleteParentUserHavingNoChildUserDueToInvalidUserId:
  Not Delete Parent User Having No Child User Due To Invalid User Id
- # testDeleteParentUserHavingNoChildUser:
+ ## testDeleteParentUserHavingNoChildUser:
  Delete Parent User Having No Child User
- # testNotDeleteChildUserDueToInvalidUserId:
+ ## testNotDeleteChildUserDueToInvalidUserId:
  Not Delete Child User Due To Invalid UserId
- # testDeleteChildUser:
+ ## testDeleteChildUser:
  Delete Child User
  
  # b) Integration Testing: (Repository Layer)
- # injectedComponentsAreNotNull:
+ ## injectedComponentsAreNotNull:
  Injected Components are not null
- # testNotSavingUserDueToNullFirstName:
+ ## testNotSavingUserDueToNullFirstName:
  User Saving failed due to first name being null
- # testNotSavingUserDueToNullUserType:
+ ## testNotSavingUserDueToNullUserType:
  User Saving failed due to user type being null
- # testSaveParentUser:
+ ## testSaveParentUser:
  Save Parent User
- # testSaveChildUsers:
+ ## testSaveChildUsers:
  Save 2 Child Users under the Parent User
- # testNotFindingValidParentUser:
+ ## testNotFindingValidParentUser:
  Finding Invalid Parent User
- # testFindingValidParentUser:
+ ## testFindingValidParentUser:
  Finding Valid Parent User
- # testNotFindingValidChildUser:
+ ## testNotFindingValidChildUser:
  Finding Invalid Child User
- # testFindingValidChildUser:
+ ## testFindingValidChildUser:
  Finding Valid Parent User
- # testNotFindingByFirstNameAndUserTypeDueToWrongFirstName:
+ ## testNotFindingByFirstNameAndUserTypeDueToWrongFirstName:
  Not Finding By First Name And UserType DueTo Wrong First Name
- # testNotFindingByFirstNameAndUserTypeDueToWrongUserType:
+ ## testNotFindingByFirstNameAndUserTypeDueToWrongUserType:
  Not Finding By First Name And UserType DueTo Wrong User Type
- # testNotFindingById:
+ ## testNotFindingById:
  Not Finding User By Id due to wrong User Id
- # testFindById:
+ ## testFindById:
  Finding User By Id
- # testNotFindingAllParentUsers:
+ ## testNotFindingAllParentUsers:
  Not Finding All Parent Users Due to Invalid UserType
- # testFindingAllParentUsers:
+ ## testFindingAllParentUsers:
  Finding All Parent Users Due to Valid UserType
- # testNotFindingAllChildUsers:
+ ## testNotFindingAllChildUsers:
  Not Finding All Child Users Due to Invalid UserType
- # testFindingAllChildUsers:
+ ## testFindingAllChildUsers:
  Finding All Child Users Due to Valid UserType
- # testFindingAllChildUsersOfAParentUser:
+ ## testFindingAllChildUsersOfAParentUser:
  Finding All Child Users of a Parent User
- # testFindingAll:
+ ## testFindingAll:
  Finding All Users
- # testUpdatingUser:
+ ## testUpdatingUser:
  Update User's Last Name
  # 6. Deployment
