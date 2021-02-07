@@ -93,7 +93,7 @@ vi. Installing Angular
  # 4. Development / Coding
  # 5. Testing:
 
-	<h4>a) Unit Testing on Service Layer</h4>
+	<h4> a) Unit Testing on Service Layer </h4>
 <ul>
 	<li><b>injectedComponentsAreNotNull:</b> Injected Components are not null</li>
 	<li><b>testNotSavingUserDueToNullFirstName: </b>User Saving failed due to first name being null</li>
@@ -117,7 +117,7 @@ vi. Installing Angular
 	<li><b>testUpdatingUser:</b>Update User's Last Name</li>
 </ul>
 
-	<h4>b) Integration Testing on Repository Layer</h4>
+	<h4> b) Integration Testing on Repository Layer </h4>
 <ul>
 	<li><b>testNotSaveParentDueToNullFirstName: </b>Not Saving Parent User Due To Null First Name</li>
 	<li><b>testSaveParent: </b>Saving Parent User</li>
