@@ -13,6 +13,8 @@ User Management Application is a simple crud application that manipulate user da
 	<li>Testing</li>
 	<li>Deployment</li>
 </ol>
+<h2>API Documentaions</h2>
+<h2>Error Logs</h2>
 
 # Tech Stacks Used
 1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log, Custom Exception Handling
@@ -88,9 +90,9 @@ User Management Application is a simple crud application that manipulate user da
  # 2. Planning
  # 3. Design
  <h3>Schema Diagram: </h3>
- <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="300px" height="300px"/>
+ <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="800px" height="400px"/>
  <h3>Class Diagram: </h3>
-  <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/uml_diagram.png" width="300px" height="300px"/>
+  <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/uml_diagram.png" width="500px" height="300px"/>
  # 4. Development / Coding
  # 5. Testing:
 
