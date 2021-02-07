@@ -146,7 +146,8 @@ vi. Installing Angular
 
  # 6. Deployment:
  <ul>
-	<h2>To deploy in docker: </h2> 
+	<h2>To deploy in docker: </h2>
+		<li>Run the command : cd User_Management_App/Backend/user_management_app</li>
 		<li>Install docker compose by running the command on terminal: sudo apt install docker-compose </li>
 		<li>Run the docker compose: sudo docker-compose up</li>
 	</ul>
