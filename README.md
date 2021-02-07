@@ -74,21 +74,21 @@ vi. Installing Angular
   
   By Analyzing the business domain / requirements and aligning with real world scenarios, we discovered and developed the following functionalites for Creating, Updating and Deleting Users:
   
- # a) Create User Data:
+ <h2> a) Create User Data: </h2> 
  <ul>
 	<li>A Child User must be created under a Parent User.</li>
 	<li>A Child User is not a must to create a Parent User. But A parent user  can have a child user while user creation.</li>
 	<li>First Name and User Type can not be empty for any type of user.</li>
 </ul> 
 
- # b) Update User Data:
+ <h2> b) Update User Data: </h2> 
  <ul>
 	<li>If a Parent User or Child User can update any field except User Type, that field will be updated without any complex logic implementation.</li>
 	<li>If the User Type of Child User is changed to Parent User, the Child will be no longer under any Parent User.</li>
 	<li>If the User Type of a Parent User is changed to Child User and if that Parent User has any Child User, those Child users User Type will be updated to Parent User. And this Parent User must be assigned to an existing Parent User.</li>
 </ul>
   
- # c) Delete User Data:
+ <h2> c) Delete User Data: </h2> 
  <ul>
 	<li>If a Parent User is deleted , then all the Child Users User Type of that Parent User will be updated to Child User. And only that Parent User will be deleted.</li>
 	<li>While a Child User is deleted, it will be deleted for storage and there will be no relation with it's existing parent user.</li>
