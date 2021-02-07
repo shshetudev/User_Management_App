@@ -52,10 +52,6 @@ vi. Installing Angular
 	<li>Run the command : cd User_Management_App/Backend/user_management_app. Then run the command: mvn clean install . It will create the backend jar file with name: user_management_app.jar</li>
 	<li>To run the jar file with flyway simply run the command: java -jar target/user_management_app.jar</li>
 	<li>To run the jar file without flyway simply run the command: java -jar -Dspring.profiles.active=dev target/user_management_app.jar</li>
-	<ul>To deploy in docker: 
-		<li>Install docker compose by running the command on terminal: sudo apt install docker-compose </li>
-		<li>Run the docker compose: sudo docker-compose up</li>
-	</ul>
 	<li>Open the web browser and run this command to see the API documentation and testing tool Swagger's interface: http://localhost:8181/swagger-ui.html#/</li>
 	<h4><b>Frontend Deployment:</b></h4>
 	<li>Run the command: cd Frontend/UserManagementApp/</li>
@@ -148,4 +144,9 @@ vi. Installing Angular
 	<li><b>testDeleteChildUser: </b>Delete Child User</li>
 </ul>
 
- # 6. Deployment
+ # 6. Deployment:
+ <ul>
+	<h2>To deploy in docker: </h2> 
+		<li>Install docker compose by running the command on terminal: sudo apt install docker-compose </li>
+		<li>Run the docker compose: sudo docker-compose up</li>
+	</ul>
