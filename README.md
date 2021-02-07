@@ -2,24 +2,28 @@
 User Management Application is a simple crud application that manipulate user data based on specific requirements. This is developed by following SDLC (Software Devlopment Life Cycle). This documentation is sectioned according to the SDLC.  Hope you will enjoy!
 
 # Sections:
-a. Enviroment Setup
-b. Quick Start
-c. SDLC:
-  1. Requirements Analysis
-  2. Planning
-  3. Design
-  4. Development / Coding
-  5. Testing
-  6. Deployment
+<ol>
+	<li><h2>Enviroment Setup<h2><li>
+	<li><h2>Quick Start<h2></li>
+		<ol>
+			<h2>SDLC:<h2>
+				<li>Requirements Analysis</li>
+				<li>Planning</li>
+				<li>Design</li>
+				<li>Development / Coding</li>
+				<li>Testing</li>
+				<li>Deployment</li>
+		</ol>
+</ol>
 
-# Tech Stack Used
+# Tech Stacks Used
 1. Server Side: Spring (Spring Boot,Spring AOP, Spring Data JPA, Spring Profile), Swagger(For API documentation), Central Log, Custom Exception Handling
 2. Client Side: HTML5, CSS3, BootStrap-4, Angular
 3. Database: MySQL, Flyway(Data Migration Tool)
 4. Deployment: Docker (Optional)
 5. Testing Covered: Mockito(Unit Testing), Junit(Integration Testing)
 
-# a)Enviroment Setup: (For Linux Users)
+# Enviroment Setup: (For Linux Users)
 
  Server Side Environment:
 i.   Installing Java 8:
