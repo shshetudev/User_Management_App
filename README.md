@@ -2,10 +2,8 @@
 User Management Application is a simple crud application that manipulate user data based on specific requirements. This is developed by following SDLC (Software Devlopment Life Cycle). This documentation is sectioned according to the SDLC.  Hope you will enjoy!
 
 # Sections:
-<ol type="I">
-<li> Enviroment Setup <li>
-<li> Quick Start </li>
-</ol>
+<h2> Enviroment Setup </h2>
+<h2> Quick Start </h2>
 		
 <h2>According to SDLC:<h2>
 <ol>
