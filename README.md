@@ -87,6 +87,10 @@ User Management Application is a simple crud application that manipulate user da
   
  # 2. Planning
  # 3. Design
+ <h3>Schema Diagram: </h3>
+ <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/schema_diagram.png" width="300px" height="300px"/>
+ <h3>Class Diagram: </h3>
+  <img src="https://github.com/shshetudev/User_Management_App/blob/main/Digarams/uml_diagram.png" width="300px" height="300px"/>
  # 4. Development / Coding
  # 5. Testing:
 
