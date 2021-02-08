@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mysql-standalone-container:
+    image: mysql:8.0.23
+    environment:
+     - MYSQL_DATABASE=user_management
+     - MYSQL_USER=root
+     - MYSQL_ROOT_PASSWORD=Root1234&
+     - MYSQL_PASSWORD=Root1234&
+     - MySQL_HOST='%'
+    volumes:
+     - /data/mysql
+  user_management_app-container:
+    image: user_management_app:1
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    depends_on: 
+      - mysql-standalone-container
+    volumes: 
+      - /data/user_management_app
+
