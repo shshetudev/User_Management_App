@@ -28,13 +28,6 @@ spring:
               dialect:
                 MySQL8Dialect
 
-  #spring.jpa.show-sql=true
-  # Flyway configuration
-  #  spring.flyway.baselineOnMigrate=true
-  #  spring.flyway.check-location=true
-  #  spring.flyway.locations=classpath:db/migration
-  #  spring.flyway.schemas=public
-  #  spring.flyway.enabled=true
 
   flyway:
     enabled: true
@@ -42,16 +35,7 @@ spring:
     check-location: true
     locations: classpath:db.migration
     schemas: flyway_schema
-#  logging.logback.rollingpolicy.file-name-pattern=${user_management_backend_log}.%d{yyyy-MM-dd}.%i.gz
-#logging.pattern.file= %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%
-#logging
-logging:
-  logback:
-    rollingpolicy:
-      max-file-size: 10MB
-      max-history: 7
-  file:
-    name: user_management_backend_logs
+
 #Actuator
 management:
   endpoints:
