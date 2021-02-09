@@ -224,7 +224,7 @@ public abstract class UserService {
         userRepository.deleteById(user.getId());
         String validatedString = isStateChanged ? " is " : " is not ";
         log.info("Child Users of Parent User with id: {}" + validatedString + "changed to Parent User", user.getId());
-        return isStateChanged;
+        return true;
     }
 
     public void deleteAllUsers() {
@@ -233,7 +233,7 @@ public abstract class UserService {
 
     private boolean changeUserTypeOfChildUsersFromChildToParent(User parentUser) throws Exception {
         boolean stateChangeStatus = false;
-        if (parentUser.getChildUsers() != null) {
+        if (parentUser.getChildUsers() != null && parentUser.getChildUsers().size() > 0) {
             List<User> childUsers = parentUser.getChildUsers();
             childUsers.forEach(user -> user.setUserType(UserType.PARENT));
             childUsers = saveAll(childUsers);
