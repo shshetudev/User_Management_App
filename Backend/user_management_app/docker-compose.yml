@@ -4,7 +4,7 @@ services:
     image: mysql:8.0.23
     environment:
      - MYSQL_DATABASE=user_management
-     - MYSQL_USER=root
+     - MYSQL_USER=shetu
      - MYSQL_ROOT_PASSWORD=Root1234&
      - MYSQL_PASSWORD=Root1234&
      - MySQL_HOST='%'
@@ -19,4 +19,6 @@ services:
       - mysql-standalone-container
     volumes: 
       - /data/user_management_app
+    ports:
+    - 8181:8181
 
