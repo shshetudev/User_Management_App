@@ -47,6 +47,7 @@ User Management Application is a simple crud application that manipulate user da
 
 # Quick Start:
 <h4>For Linux Environment</h4>
+<h4><b>For Quickest deployment see : Deployment Section</b></h4>
 <ul>
 	<li>Open terminal and run the command: git clone https://github.com/shshetudev/User_Management_App.git</li>
 	<h4><b>Backend Deployment:</b></h4>
