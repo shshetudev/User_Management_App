@@ -160,7 +160,8 @@ User Management Application is a simple crud application that manipulate user da
  # 6. Deployment:
  <ul>
 	<h2>To deploy in docker: </h2>
-		<li>Run the command : cd User_Management_App/Backend/user_management_app</li>
+		<li>Run the command : cd User_Management_App/Backend</li>
 		<li>Install docker compose by running the command on terminal: sudo apt install docker-compose </li>
-		<li>Run the docker compose: sudo docker-compose up</li>
+		<li>Run the command: sudo chmod +x deploy.sh</li>
+		<li>Run the command: ./deploy.sh</li>
 	</ul>
